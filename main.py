@@ -1,9 +1,6 @@
 from kivy.app import App
-from kivy.uix.widget import Widget
 
-
-class MainWindow(Widget):
-    pass
+from gui.MainWindow import MainWindow
 
 
 class ComparerApp(App):

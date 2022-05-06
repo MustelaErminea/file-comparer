@@ -1,0 +1,65 @@
+<MainWindow>:
+    name: 'tabbed_screen'
+    canvas.before:
+        Color:
+            rgba: 255/255, 255/255, 255/255, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    FloatLayout:
+        id: master_layout
+
+        size_hint: 1, 1
+        ActionBar:
+            id: master_actionbar
+            pos_hint: {'top': 1}
+            background_image: ''
+            background_color: 195/255, 60/255, 35/255, 1
+            ActionView:
+                use_separator: True
+                ActionPrevious:
+                    title: 'File comparer'
+                    with_previous: False
+                ActionOverflow:
+                ActionButton:
+                    icon: 'atlas://data/images/defaulttheme/audio-volume-high'
+                ActionButton:
+                    important: True
+                    text: 'Important'
+                ActionButton:
+                    text: 'Btn2'
+                ActionButton:
+                    text: 'Btn3'
+                ActionButton:
+                    text: 'Btn4'
+                ActionGroup:
+                    text: 'Group1'
+                    ActionButton:
+                        text: 'Btn5'
+                    ActionButton:
+                        text: 'Btn6'
+                    ActionButton:
+                        text: 'Btn7'
+        TabbedPanel:
+            id: main_panel
+            size_hint: 0.9, 0.9
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            background_color: 195/255, 60/255, 35/255, 1
+            background_image: ''
+            do_default_tab: False
+            TabbedPanelItem:
+                text: 'Tab 1'
+                Label:
+                    text: 'First Tab'
+            TabbedPanelItem:
+                text: 'Tab 2'
+                BoxLayout:
+                    orientation: 'vertical'
+                    Label:
+                        text: 'Second Tab'
+                    Button:
+                        text: 'Click it'
+            TabbedPanelItem:
+                text: 'Tab 3'
+                Label:
+                    text: 'Third Tab'
